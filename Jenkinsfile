@@ -9,5 +9,10 @@ dockerfile {
     cron = ''
     cpImages = true
     osTypes = ['ubi8']
-    slackChannel = 'streams-alerts'
+    // slackChannel = 'streams-alerts'
+    disableConcurrentBuilds = true
+    nanoVersion = true
+    // TODO: For testing only
+    slackChannel = ''
+    testbreakReporting = false
 }
