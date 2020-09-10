@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    io.kompose.service: zookeeper
+  name: zookeeper
+spec:
+  ports:
+  - name: "32181"
+    port: 32181
+    targetPort: 32181
+  selector:
+    io.kompose.service: zookeeper
+status:
+  loadBalancer: {}
