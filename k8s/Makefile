@@ -37,6 +37,9 @@ stop-content:
 show-content:
 	kubectl exec -it deployment/schema-registry -- kafka-avro-console-consumer --bootstrap-server kafkasvc:29092 --topic $(topic) --from-beginning
 
+scale-app:
+	kubectl scale --replicas=$(replicas) deployment/kafka-music-application
+
 app:
 	kubectl apply -f  kafka-music-application-service.yaml,kafka-music-application-deployment.yaml
 
